@@ -18,7 +18,7 @@ printf "📅 Building $(pwd)/${NAME}.pdf - "
 PLANNER_YEAR=${TARGET_YEAR} PASSES=2 CFG=${CONFIG_FILES} NAME=${NAME} PREVIEW=1 ./single.sh >/tmp/$NAME.log &
 BUILDER_PID=$!
 
-tail --pid=$BUILDER_PID -f /tmp/$NAME.log | python3 parser.py &
+gtail --pid=$BUILDER_PID -f /tmp/$NAME.log | python3 parser.py &
 OUTPUT_PID=$!
 
 

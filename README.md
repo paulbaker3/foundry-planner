@@ -71,6 +71,40 @@ NAME="sn_a5x.breadcrumb.default" \
 ./single.sh
 ```
 
+```bash
+# This will produce a Scribe formated daily calendar with the breadcrumb header
+PLANNER_YEAR=2025 \
+PASSES=1 \
+CFG="cfg/base.yaml,cfg/template_breadcrumb.yaml,cfg/kscribe.breadcrumb.default.dailycal.yaml" \
+NAME="scribe.2025.dailycal.breadcrumb.default" \
+./single.sh
+```
+
+```bash
+# This will produce a Scribe formated daily calendar with the breadcrumb header
+PLANNER_YEAR=2025 \
+PASSES=1 \
+CFG="cfg/base.yaml,cfg/template_months_on_side.yaml,cfg/kscribe.breadcrumb.default.yaml" \
+NAME="scribe.2025.dailycal.breadcrumb.default" \
+./single.sh
+```
+
+```bash
+# This will produce an abbreviated planner for 2028 in the root dir for development pursposes
+# with these default configs
+# CONFIG_FILES='cfg/base.yaml,cfg/template_months_on_side.yaml,cfg/sn_a5x.mos.default.yaml,cfg/sn_a5x.mos.default.dailycal.yaml'
+./preview.sh 2028
+```
+
+```bash
+# This will produce a Scribe formated daily calendar with the breadcrumb on the side
+PLANNER_YEAR=2029 \
+PASSES=1 \
+CFG="cfg/base.yaml,cfg/template_months_on_side.yaml,cfg/sn_a5x.mos.default.yaml,cfg/sn_a5x.mos.default.dailycal.yaml" \
+./single.sh
+```
+
+
 ## Directory Structure
 
 ### root

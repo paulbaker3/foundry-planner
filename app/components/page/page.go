@@ -1,7 +1,7 @@
 package page
 
 import (
-	"github.com/kudrykv/latex-yearly-planner/app/config"
+	"github.com/paulbaker3/foundry-planner/app/config"
 )
 
 type Page struct {

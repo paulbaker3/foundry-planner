@@ -3,10 +3,10 @@ package compose
 import (
 	"strconv"
 
-	"github.com/kudrykv/latex-yearly-planner/app/components/cal"
-	"github.com/kudrykv/latex-yearly-planner/app/components/header"
-	"github.com/kudrykv/latex-yearly-planner/app/components/page"
-	"github.com/kudrykv/latex-yearly-planner/app/config"
+	"github.com/paulbaker3/foundry-planner/app/components/cal"
+	"github.com/paulbaker3/foundry-planner/app/components/header"
+	"github.com/paulbaker3/foundry-planner/app/components/page"
+	"github.com/paulbaker3/foundry-planner/app/config"
 )
 
 func Annual(cfg config.Config, tpls []string) (page.Modules, error) {

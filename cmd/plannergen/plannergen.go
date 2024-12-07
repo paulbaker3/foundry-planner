@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/kudrykv/latex-yearly-planner/app"
+	"github.com/paulbaker3/foundry-planner/app"
 )
 
 var code int

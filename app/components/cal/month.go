@@ -5,8 +5,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/kudrykv/latex-yearly-planner/app/components/header"
-	"github.com/kudrykv/latex-yearly-planner/app/components/hyper"
+	"github.com/paulbaker3/foundry-planner/app/components/header"
+	"github.com/paulbaker3/foundry-planner/app/components/hyper"
 )
 
 type Months []*Month

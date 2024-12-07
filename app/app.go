@@ -8,10 +8,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/kudrykv/latex-yearly-planner/app/components/page"
-	"github.com/kudrykv/latex-yearly-planner/app/compose"
-	"github.com/kudrykv/latex-yearly-planner/app/config"
-	"github.com/kudrykv/latex-yearly-planner/app/tpls"
+	"github.com/paulbaker3/foundry-planner/app/components/page"
+	"github.com/paulbaker3/foundry-planner/app/compose"
+	"github.com/paulbaker3/foundry-planner/app/config"
+	"github.com/paulbaker3/foundry-planner/app/tpls"
 	"github.com/urfave/cli/v2"
 )
 

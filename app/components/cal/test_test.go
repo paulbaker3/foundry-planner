@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/kudrykv/latex-yearly-planner/app/components/cal"
+	"github.com/paulbaker3/foundry-planner/app/components/cal"
 )
 
 func TestTest(t *testing.T) {

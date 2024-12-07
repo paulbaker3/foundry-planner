@@ -3,8 +3,8 @@ package compose
 import (
 	"fmt"
 
-	"github.com/kudrykv/latex-yearly-planner/app/components/page"
-	"github.com/kudrykv/latex-yearly-planner/app/config"
+	"github.com/paulbaker3/foundry-planner/app/components/page"
+	"github.com/paulbaker3/foundry-planner/app/config"
 )
 
 func Title(cfg config.Config, tpls []string) (page.Modules, error) {

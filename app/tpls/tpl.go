@@ -6,7 +6,7 @@ import (
 	"io"
 	"text/template"
 
-	"github.com/kudrykv/latex-yearly-planner/app/config"
+	"github.com/paulbaker3/foundry-planner/app/config"
 )
 
 var tpl = template.Must(template.New("").Funcs(template.FuncMap{

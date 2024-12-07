@@ -6,10 +6,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/kudrykv/latex-yearly-planner/app/components/header"
-	"github.com/kudrykv/latex-yearly-planner/app/components/hyper"
-	"github.com/kudrykv/latex-yearly-planner/app/tex"
-	"github.com/kudrykv/latex-yearly-planner/app/texx"
+	"github.com/paulbaker3/foundry-planner/app/components/header"
+	"github.com/paulbaker3/foundry-planner/app/components/hyper"
+	"github.com/paulbaker3/foundry-planner/app/tex"
+	"github.com/paulbaker3/foundry-planner/app/texx"
 )
 
 type Days []*Day

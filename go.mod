@@ -1,4 +1,4 @@
-module github.com/kudrykv/latex-yearly-planner
+module github.com/paulbaker3/foundry-planner
 
 go 1.16
 

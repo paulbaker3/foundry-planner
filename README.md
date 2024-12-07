@@ -2,12 +2,9 @@
 
 PDF planner designed for e-ink devices.
 
-See [discussions](https://github.com/paulbaker3/foundry-planner/discussions) for available planners and their variations.
+See [original discussions topic](https://github.com/kudrykv/latex-yearly-planner/discussions) for available planners and their variations.
 
-### Documentation work in progress
-I am planning to write more documentation on how to use it and build it on your own.
-Spoiler alert: it won't be easy.
-Anyhow, more info on this will come.
+See [forked discussions topic](https://github.com/paulbaker3/foundry-planner/discussions) for ongoing support and feature requests. 
 
 ## Quick Start Guide
 Here are the steps to quickly get the project up and running.
@@ -24,11 +21,14 @@ The following was tested with [POP_OS 22.04.1 LTS](https://pop.system76.com/) un
 2. [LaTex](https://miktex.org/download) & [PDFLaTeX](https://www.latex-project.org/get/)
 3. From the project directory, run the following command after updating
  'PLANNER_YEAR' below. This should generate the PDF in the 'out' directory.
-<code>PLANNER_YEAR=2022 \
+
+```bash
+PLANNER_YEAR=2022 \
 PASSES=1 \
 CFG="cfg/base.yaml,cfg/template_breadcrumb.yaml,cfg/sn_a5x.breadcrumb.default.yaml" \
 NAME="sn_a5x.breadcrumb.default" \
-./single.sh</code> 
+./single.sh
+```
 
 [Source](https://github.com/paulbaker3/foundry-planner/discussions/34#discussioncomment-3128344)
 
@@ -47,6 +47,61 @@ Instead of installing the dependencies manually, this repository is defined as a
 1. [Install Nix](https://nixos.org/download.html)
 2. Build a planner pdf using `nix build`
 3. Or, if you want to develop the code, enter a shell with all the dependencies present using `nix develop`
+
+# Working with the code
+
+## Generating Novel Planners
+
+### Command Structure 
+
+Planners are generated using variables to configure each aspect of the desired output:
+* `PLANNER_YEAR` - The year that will be produced
+* `PASSES` - Not sure what this does
+* `CFG` - The configuration files that will be used. Not sure if order matters. 
+* `NAME` - The output file name that will be dropped into the `/out` directory
+* `root` - The file `.sh` file is what initiates the generation process
+
+### Examples
+```bash
+# This will produce 2025's entire year planner
+PLANNER_YEAR=2025 \
+PASSES=1 \
+CFG="cfg/base.yaml,cfg/template_breadcrumb.yaml,cfg/sn_a5x.breadcrumb.default.yaml" \
+NAME="sn_a5x.breadcrumb.default" \
+./single.sh
+```
+
+## Directory Structure
+
+### root
+
+### app
+
+Core functions. Component definitions. Layouts. Consumption of configurations.
+
+### cfg
+
+Configuration for supported outputs.
+
+### cmd
+
+Single generation command: `cmd/plannergen/plannergen.go`
+
+### examples
+
+Example generated output. Organized by layout size and style. Not sure why so many examples though. Test data?
+
+### out
+
+Generated files. 
+
+### tpls
+
+Pre-configured commands (ie "Templates")
+
+### translations
+
+Translation mapping json files
    
 # Preview examples
 <img src="https://raw.githubusercontent.com/paulbaker3/foundry-planner/refs/heads/main/examples/pictures/sn_a5x.planner/01_annual.png" width="419">

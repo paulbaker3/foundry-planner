@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/caarlos0/env/v6"
+	"github.com/paulbaker3/foundry-planner/app/components/icsparser"
 	"gopkg.in/yaml.v3"
 )
 
@@ -20,6 +21,8 @@ type Config struct {
 	ClearTopRightCorner bool
 	AMPMTime            bool
 	AddLastHalfHour     bool
+
+	Events []icsparser.Event
 
 	Pages Pages
 

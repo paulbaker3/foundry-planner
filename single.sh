@@ -9,14 +9,15 @@ else
   echo "Building using plannergen binary at \"${PLANNERGEN_BINARY}\""
 fi
 
-if [ -z "$TEMPLATE" ]; then
-  if [ -z "$CFG" ]; then
+ICSFILE="${ICSFILE:-}"
+# ICSFILE="app/components/icsparser/example_calendar.ics"
+
+
+if [ -z "$CFG" ]; then
+  if [ -z "$TEMPLATE" ]; then
     echo "Either TEMPLATE or CFG must be set"
     exit 1
   fi
-  # If TEMPLATE is not set, assume CFG is provided
-  # echo "Using provided CFG: $CFG"
-else
   # Map TEMPLATE to CFG values
   case "$TEMPLATE" in
     scribe_breadcrumb_daily)
@@ -37,14 +38,16 @@ else
       ;;
   esac
   echo "Using CFG mapped from TEMPLATE: $CFG"
+else
+  echo "Using provided CFG: $CFG"
 fi
 
 echo "Running $GO_CMD with CFG: $CFG"
 
 if [ -z "$PREVIEW" ]; then
-  eval $GO_CMD --config "${CFG}"
+  eval $GO_CMD --config "${CFG}" --icsfile "${ICSFILE}"
 else
-  eval $GO_CMD --preview --config "${CFG}"
+    eval $GO_CMD --preview --config "${CFG}" --icsfile "${ICSFILE}"
 fi
 
 

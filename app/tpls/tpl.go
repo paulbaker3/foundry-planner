@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"text/template"
+	"time"
 
 	"github.com/paulbaker3/foundry-planner/app/config"
 )
@@ -20,27 +21,24 @@ var tpl = template.Must(template.New("").Funcs(template.FuncMap{
 			if !ok {
 				return nil, errors.New("dict keys must be strings")
 			}
-
 			dict[key] = values[i+1]
 		}
-
 		return dict, nil
 	},
-
 	"incr": func(i int) int {
 		return i + 1
 	},
-
 	"dec": func(i int) int {
 		return i - 1
 	},
-
 	"is": func(i interface{}) bool {
 		if value, ok := i.(bool); ok {
 			return value
 		}
-
 		return i != nil
+	},
+	"formatDate": func(t time.Time) string {
+		return t.Format("02-01-2006")
 	},
 }).ParseGlob(`./tpls/*`))
 

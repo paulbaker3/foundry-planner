@@ -1,5 +1,7 @@
+// tex package provides functions to format strings in LaTeX.
 package tex
 
+// fmt is a package that provides functions to format strings in LaTeX.
 import "fmt"
 
 const nl = "\n"

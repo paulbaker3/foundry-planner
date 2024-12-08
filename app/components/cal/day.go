@@ -1,3 +1,5 @@
+// day.go file contains the Day struct and methods for working with days.
+// It is used to create a calendar of days and hours.
 package cal
 
 import (
@@ -6,13 +8,25 @@ import (
 	"strings"
 	"time"
 
+	// The header package is used to create headers for the calendar.
 	"github.com/paulbaker3/foundry-planner/app/components/header"
+	// The hyper package is used to create hyperlinks.
 	"github.com/paulbaker3/foundry-planner/app/components/hyper"
+	// The tex package is used to create TeX code.
+	// TeX code is a typesetting system that is used to create high-quality documents.
 	"github.com/paulbaker3/foundry-planner/app/tex"
+	// The texx package is used to create TeX code.
+	// texx is needed to create a TeX code for the day. See `texx.EmphCell(day)` in this file
 	"github.com/paulbaker3/foundry-planner/app/texx"
 )
 
 type Days []*Day
+
+// The Day struct is used in the cal.go file to create a calendar of days.
+// It has methods for creating a day, adding days, getting
+// the next and previous days, and checking if the next and previous days exist.
+// It also has methods for getting the day's date, week, and month, and for
+// formatting the day's hour.
 type Day struct {
 	Time time.Time
 }

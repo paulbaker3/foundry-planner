@@ -76,7 +76,7 @@ NAME="sn_a5x.breadcrumb.default" \
 PLANNER_YEAR=2025 \
 PASSES=1 \
 CFG="cfg/base.yaml,cfg/template_breadcrumb.yaml,cfg/kscribe.breadcrumb.default.dailycal.yaml" \
-NAME="scribe.2025.dailycal.breadcrumb.default" \
+NAME="test.pdf" \
 ./single.sh
 ```
 
@@ -101,6 +101,13 @@ NAME="scribe.2025.dailycal.breadcrumb.default" \
 PLANNER_YEAR=2029 \
 PASSES=1 \
 CFG="cfg/base.yaml,cfg/template_months_on_side.yaml,cfg/sn_a5x.mos.default.yaml,cfg/sn_a5x.mos.default.dailycal.yaml" \
+./single.sh
+```
+
+```bash
+# This uses a TEMPLATE value instead of CFG. The PASSES is assumed to be single.
+PASSES=1 \
+TEMPLATE='scribe_breadcrumb_daily' \
 ./single.sh
 ```
 
